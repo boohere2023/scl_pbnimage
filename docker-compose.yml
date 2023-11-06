@@ -2,7 +2,7 @@ version: "3"
 
 services:
   aapanel:
-    image: sclbo/bpn_:lib
+    image: sclbo/bpn_image:lib
     container_name: "aapanel-webserver"
     ports:
       - "${AAPANEL_PORT}:7800"
