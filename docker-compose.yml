@@ -45,29 +45,29 @@ services:
     volumes:
       - ./mysql-exporter/.my.cnf:/root/.my.cnf
     environment:
-      - DATA_SOURCE_NAME=mysqld_exporter:5BSAvzaKmTttTUif@(aapanel:3306)/
+      - DATA_SOURCE_NAME=mysqld_exporter:5BSAvzaKmTttTUif@(localhost:3306)/
     command:
-      - --mysqld.username=mysqld_exporter:5BSAvzaKmTttTUif
-      - --mysqld.address=aapanel-webserver:3306
-      --collect.global_status
-      --collect.info_schema.innodb_metrics
-      --collect.auto_increment.columns
-      --collect.info_schema.processlist
-      --collect.binlog_size
-      --collect.info_schema.tablestats
-      --collect.global_variables
-      --collect.info_schema.query_response_time
-      --collect.info_schema.userstats
-      --collect.info_schema.tables
-      --collect.perf_schema.tablelocks
-      --collect.perf_schema.file_events
-      --collect.perf_schema.eventswaits
-      --collect.perf_schema.indexiowaits
-      --collect.perf_schema.tableiowaits
-      --collect.slave_status
-      --collect.info_schema.tables.databases=db-schema1
-      --collect.engine_innodb_status
-      --web.listen-address=0.0.0.0:9104
+      - '--mysqld.username=mysqld_exporter:5BSAvzaKmTttTUif'
+      - '--mysqld.address=aapanel-webserver:3306'
+      - '--collect.global_status'
+      - '--collect.info_schema.innodb_metrics'
+      - '--collect.auto_increment.columns'
+      - '--collect.info_schema.processlist'
+      - '--collect.binlog_size'
+      - '--collect.info_schema.tablestats'
+      - '--collect.global_variables'
+      - '--collect.info_schema.query_response_time'
+      - '--collect.info_schema.userstats'
+      - '--collect.info_schema.tables'
+      - '--collect.perf_schema.tablelocks'
+      - '--collect.perf_schema.file_events'
+      - '--collect.perf_schema.eventswaits'
+      - '--collect.perf_schema.indexiowaits'
+      - '--collect.perf_schema.tableiowaits'
+      - '--collect.slave_status'
+      - '--collect.info_schema.tables.databases=db-schema1'
+      - '--collect.engine_innodb_status'
+      - '--web.listen-address=0.0.0.0:9104'
     links:
       - aapanel
       
