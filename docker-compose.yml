@@ -48,7 +48,7 @@ services:
       - DATA_SOURCE_NAME=mysqld_exporter:5BSAvzaKmTttTUif@tcp(127.0.0.1:3306)/
     command:
       - '--mysqld.username=mysqld_exporter:5BSAvzaKmTttTUif'
-      - '--mysqld.address=localhost:3306'
+      - '--mysqld.address=aapanel:3306'
       - '--collect.global_status'
       - '--collect.info_schema.innodb_metrics'
       - '--collect.auto_increment.columns'
